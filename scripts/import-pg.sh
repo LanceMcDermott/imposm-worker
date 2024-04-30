@@ -73,7 +73,7 @@ else
   for pbf in $PBF_LOCATION/*.pbf; do
     if [ -f "$pbf" ]; then
         echo -e "\n----------- Running imposm, reading file $pbf"
-    	  /root/go/bin/imposm import -mapping /scripts/mapping.yml -read $pbf --appendcache -cachedir work/tmp
+    	  /root/go/bin/imposm import -mapping /scripts/mapping.yml -read $pbf --mergecache -cachedir work/tmp
         IMPOSM=true
     fi
   done
